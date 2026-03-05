@@ -2,6 +2,7 @@ package dev.nandi0813.api;
 
 import dev.nandi0813.api.Enum.DivisionName;
 import dev.nandi0813.api.Enum.WeightClass;
+import dev.nandi0813.api.Utilities.PlayerNametag;
 import org.bukkit.entity.Player;
 
 public abstract class ZonePracticeApi
@@ -107,5 +108,14 @@ public abstract class ZonePracticeApi
      * @return The player's global wins (unranked + ranked)
      */
     public abstract int getGlobalWins(Player player);
+
+    /**
+     * Retrieves the nametag information of a given player.
+     *
+     * @param player The player whose nametag information is to be retrieved.
+     * @return The {@link PlayerNametag} associated with the specified player, containing
+     *         prefix, name color, and suffix components.
+     */
+    public abstract PlayerNametag getPlayerNametag(Player player);
 
 }
