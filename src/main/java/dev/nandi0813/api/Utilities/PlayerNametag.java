@@ -10,11 +10,13 @@ public class PlayerNametag {
     private final Component prefix;
     private final NamedTextColor colorOfName;
     private final Component suffix;
+    private final int sortPriority;
 
-    public PlayerNametag(Component prefix, NamedTextColor colorOfName, Component suffix) {
+    public PlayerNametag(Component prefix, NamedTextColor colorOfName, Component suffix, int sortPriority) {
         this.prefix = prefix;
         this.colorOfName = colorOfName;
         this.suffix = suffix;
+        this.sortPriority = sortPriority;
     }
 
 }
