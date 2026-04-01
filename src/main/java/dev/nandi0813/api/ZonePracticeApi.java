@@ -1,18 +1,22 @@
 package dev.nandi0813.api;
 
-import dev.nandi0813.api.Enum.DivisionName;
-import dev.nandi0813.api.Enum.WeightClass;
-import dev.nandi0813.api.Utilities.PlayerNametag;
+import dev.nandi0813.api.enums.DivisionName;
+import dev.nandi0813.api.enums.WeightClass;
+import dev.nandi0813.api.ladder.NormalLadder;
+import dev.nandi0813.api.profile.Division;
+import dev.nandi0813.api.profile.Profile;
+import dev.nandi0813.api.profile.ProfileStat;
+import dev.nandi0813.api.utilities.PlayerNametag;
+import lombok.Getter;
 import org.bukkit.entity.Player;
+
+import java.util.Set;
 
 public abstract class ZonePracticeApi
 {
 
+    @Getter
     public static ZonePracticeApi instance = null;
-
-    public static ZonePracticeApi getInstance() {
-        return instance;
-    }
 
     /**
      * Get the player's division
@@ -117,5 +121,15 @@ public abstract class ZonePracticeApi
      *         prefix, name color, and suffix components.
      */
     public abstract PlayerNametag getPlayerNametag(Player player);
+
+    /**
+     * Get the universal default elo for ladders
+     * @return The default elo
+     */
+    public abstract int getDefaultElo();
+
+    public abstract Division getDivision(Profile profile);
+
+    public abstract Set<NormalLadder> getLadders();
 
 }

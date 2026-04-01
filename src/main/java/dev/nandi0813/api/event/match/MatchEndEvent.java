@@ -1,0 +1,28 @@
+package dev.nandi0813.api.event.match;
+
+import dev.nandi0813.api.abstraction.Match;
+import lombok.Getter;
+import org.bukkit.event.Event;
+import org.bukkit.event.HandlerList;
+
+@Getter
+public class MatchEndEvent extends Event {
+
+    private static final HandlerList handlers = new HandlerList();
+
+    private final Match match;
+
+    public MatchEndEvent(Match match) {
+        this.match = match;
+    }
+
+    @Override
+    public HandlerList getHandlers() {
+        return handlers;
+    }
+
+    public static HandlerList getHandlerList() {
+        return handlers;
+    }
+
+}
