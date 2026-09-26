@@ -24,4 +24,16 @@ public interface Match extends Spectatable {
      */
     int getWinsNeeded();
 
+    /**
+     * Get the ladder name of the match.
+     * @return The ladder name of the match, or null if not set
+     */
+    String getLadderName();
+
+    /**
+     * Get the ladder display name of the match.
+     * @return The ladder display name of the match, or null if not set
+     */
+    String getLadderDisplayName();
+
 }
