@@ -23,7 +23,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("com.github.ZoneDevelopement:ZonePracticePro-Api:2.7.0")
+    compileOnly("com.github.ZoneDevelopement:ZonePracticePro-Api:2.9.0")
 }
 ```
 
@@ -41,7 +41,7 @@ Maven:
   <dependency>
     <groupId>com.github.ZoneDevelopement</groupId>
     <artifactId>ZonePracticePro-Api</artifactId>
-    <version>2.7.0</version>
+    <version>2.9.0</version>
     <scope>provided</scope>
   </dependency>
 </dependencies>
