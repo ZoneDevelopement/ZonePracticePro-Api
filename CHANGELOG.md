@@ -3,6 +3,14 @@
 All notable changes to the ZonePracticePro API.
 
 
+## 2.9.0 - 2026-10-26
+
+### ✨ New Features
+- **api:** Add leaderboard entries and player entry lookup (#3) ([`84eae1e`](https://github.com/ZoneDevelopement/ZonePracticePro-Api/commit/84eae1e5a0119f28e1b251cb55f32951d0b56fc6))
+
+### 🧩 Other Changes
+- **release:** ZonePracticePro API 2.9.0 ([`036c748`](https://github.com/ZoneDevelopement/ZonePracticePro-Api/commit/036c748601213a20071181fd9ea28bcc89371fdf))
+
 ## 2.8.0 - 2026-10-25
 
 ### ✨ New Features
