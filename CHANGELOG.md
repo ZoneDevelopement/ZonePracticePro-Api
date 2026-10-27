@@ -3,6 +3,12 @@
 All notable changes to the ZonePracticePro API.
 
 
+## 2.11.0 - 2026-10-27
+
+### ✨ New Features
+- **api:** Add arena leases, match block-change event and match arena info ([`590ad23`](https://github.com/ZoneDevelopement/ZonePracticePro-Api/commit/590ad2358ec4ff5792772b278085a2dfd00a1d3c))
+- **api:** Expose bot bodies of a match ([`3e1ecc7`](https://github.com/ZoneDevelopement/ZonePracticePro-Api/commit/3e1ecc7fee80a63800774ac2dd464a0bc4ff1100))
+
 ## 2.10.0 - 2026-10-27
 
 ### ✨ New Features
