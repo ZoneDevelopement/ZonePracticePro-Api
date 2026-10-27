@@ -24,9 +24,9 @@ public abstract class ZonePracticeApi
 
     /**
      * Incremented on every additive API release. 2.4.0 = 3, 2.5.0 = 4, 2.6.0 = 5, 2.7.0 = 6, 2.8.0 = 7,
-     * 2.9.0 = 8.
+     * 2.9.0 = 8, 2.10.0 = 9.
      */
-    public static final int API_VERSION = 8;
+    public static final int API_VERSION = 9;
 
     /**
      * Use {@link #getInstance()}. Kept for binary compatibility; set by the core plugin only.
