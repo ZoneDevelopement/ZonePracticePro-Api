@@ -47,6 +47,14 @@ public interface BotFightView {
     boolean isLive();
 
     /**
+     * @return True when the body may move: while the round is live, and during the start countdown when the
+     * ladder allows start movement. Attacks still wait for {@link #isLive()}.
+     */
+    default boolean canMove() {
+        return isLive();
+    }
+
+    /**
      * @return A copy of the arena bounds
      */
     BoundingBox getArenaBounds();
