@@ -161,4 +161,13 @@ public interface Match extends Spectatable {
         throw new UnsupportedOperationException("Requires ZonePractice Pro with API 2.11.0+");
     }
 
+    /**
+     * Get the bot bodies taking part in the match. Empty for matches without bots.
+     * @return The bot bodies of the match, never null
+     * @since 2.11.0
+     */
+    default List<Player> getBotBodies() {
+        throw new UnsupportedOperationException("Requires ZonePractice Pro with API 2.11.0+");
+    }
+
 }
