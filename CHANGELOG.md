@@ -3,6 +3,14 @@
 All notable changes to the ZonePracticePro API.
 
 
+## 2.10.0 - 2026-10-27
+
+### ✨ New Features
+- **api:** Add BotFightView.canMove for start-countdown movement ([`c80783d`](https://github.com/ZoneDevelopement/ZonePracticePro-Api/commit/c80783dec27cf6b6bd61d4274f85064be8991058))
+
+### 🧩 Other Changes
+- **release:** ZonePracticePro API 2.10.0 ([`2ce45db`](https://github.com/ZoneDevelopement/ZonePracticePro-Api/commit/2ce45db644c5c391b55ef1cb49ef0e2b35a78d41))
+
 ## 2.9.0 - 2026-10-26
 
 ### ✨ New Features
