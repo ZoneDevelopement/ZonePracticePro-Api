@@ -1,7 +1,9 @@
 package dev.nandi0813.api.Interface;
 
 import dev.nandi0813.api.Enum.MatchType;
+import org.bukkit.World;
 import org.bukkit.entity.Player;
+import org.bukkit.util.BoundingBox;
 
 import java.util.List;
 import java.util.UUID;
@@ -121,6 +123,42 @@ public interface Match extends Spectatable {
      */
     default RoundInventory getRoundInventory(UUID player, int round) {
         throw new UnsupportedOperationException("Requires ZonePractice Pro with API 2.6.0+");
+    }
+
+    /**
+     * Get the name of the arena the match was asked for. For a match in an arena copy this is the original arena.
+     * @return The original arena name, never null
+     * @since 2.11.0
+     */
+    default String getOriginalArenaName() {
+        throw new UnsupportedOperationException("Requires ZonePractice Pro with API 2.11.0+");
+    }
+
+    /**
+     * Get the world of the arena the match is played in.
+     * @return The arena world, never null
+     * @since 2.11.0
+     */
+    default World getArenaWorld() {
+        throw new UnsupportedOperationException("Requires ZonePractice Pro with API 2.11.0+");
+    }
+
+    /**
+     * Get the box covering every block of the arena the match is played in. The upper corner is exclusive.
+     * @return The arena bounds, never null
+     * @since 2.11.0
+     */
+    default BoundingBox getArenaBounds() {
+        throw new UnsupportedOperationException("Requires ZonePractice Pro with API 2.11.0+");
+    }
+
+    /**
+     * Check whether the match is played in a build arena or an arena copy. Such arenas host one match at a time.
+     * @return true for a build arena or an arena copy
+     * @since 2.11.0
+     */
+    default boolean isBuildArena() {
+        throw new UnsupportedOperationException("Requires ZonePractice Pro with API 2.11.0+");
     }
 
 }

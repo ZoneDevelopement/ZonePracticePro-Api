@@ -4,6 +4,7 @@ import dev.nandi0813.api.Enum.DivisionName;
 import dev.nandi0813.api.Enum.LeaderboardType;
 import dev.nandi0813.api.Enum.PlayerState;
 import dev.nandi0813.api.Enum.WeightClass;
+import dev.nandi0813.api.Interface.ArenaLease;
 import dev.nandi0813.api.Interface.BotRegistry;
 import dev.nandi0813.api.Interface.CosmeticsRegistry;
 import dev.nandi0813.api.Interface.FFA;
@@ -16,6 +17,7 @@ import dev.nandi0813.api.Interface.Queue;
 import dev.nandi0813.api.Utilities.PlayerNametag;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.plugin.Plugin;
 
 import java.util.List;
 
@@ -24,9 +26,9 @@ public abstract class ZonePracticeApi
 
     /**
      * Incremented on every additive API release. 2.4.0 = 3, 2.5.0 = 4, 2.6.0 = 5, 2.7.0 = 6, 2.8.0 = 7,
-     * 2.9.0 = 8, 2.10.0 = 9.
+     * 2.9.0 = 8, 2.10.0 = 9, 2.11.0 = 10.
      */
-    public static final int API_VERSION = 9;
+    public static final int API_VERSION = 10;
 
     /**
      * Use {@link #getInstance()}. Kept for binary compatibility; set by the core plugin only.
@@ -504,5 +506,17 @@ public abstract class ZonePracticeApi
      * @since 2.8.0
      */
     public abstract BotRegistry getBotRegistry();
+
+    /**
+     * Leases a free arena for an addon session, for example to show something to players in it.
+     * Build arenas and their copies are exclusive: no match or other lease starts in them until release.
+     * Other arenas are shared and stay open for matches. Main thread only.
+     * Leases are released automatically when the owner plugin disables.
+     * @param owner the addon plugin
+     * @param arenaName name of an arena (not a copy); its free copies are used too
+     * @return the lease, or null if the arena is unknown, disabled, frozen or has no free copy
+     * @since 2.11.0
+     */
+    public abstract ArenaLease leaseArena(Plugin owner, String arenaName);
 
 }
